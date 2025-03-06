@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Order Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Full background image */
+    body {
+      background-image: url('../static/landing_page/images/bg2.webp');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Sidebar styles */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding-top: 20px;
+    }
+
+    #sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #sidebar ul li a {
+      padding: 10px 20px;
+      text-align: left;
+      color: white;
+      cursor: pointer;
+    }
+
+    #sidebar ul li a:hover {
+      background-color: #d6c5c5;
+    }
+
+    /* Main content styles */
+    #main-content {
+      margin-left: 250px;
+      padding: 20px;
+      color: white;
+      height: 100%;
+    }
+
+    /* Header styles */
+    #header {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Table styles */
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+      color: whitesmoke;
+    }
+
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+      color: whitesmoke;
+    }
+
+    table th {
+      background-color: #343a40;
+      color: yellowgreen;
+    }
+
+    table tbody tr:hover {
+      background-color: yellow;
+    }
+
+    /* Responsive media query */
+    @media (max-width: 768px) {
+      #sidebar {
+        width: 200px;
+      }
+
+      #main-content {
+        margin-left: 200px;
+      }
+
+      table th, table td {
+        font-size: 12px;
+        color: whitesmoke;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="/order_foods">Order Now</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">Customers</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content">
+    <!-- Header -->
+    <div id="header">
+      <h1>Food Order Admin Dashboard</h1>
+    </div>
+
+    <!-- Table -->
+    <div class="table-container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Order ID</th>
+            <th>Customer Name</th>
+            <th>Food Item</th>
+            <th>Status</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example rows -->
+          <tr>
+            <td>1</td>
+            <td>#001</td>
+            <td>John Doe</td>
+            <td>Pizza</td>
+            <td>Delivered</td>
+            <td>$12.99</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>#002</td>
+            <td>Jane Smith</td>
+            <td>Burger</td>
+            <td>Pending</td>
+            <td>$8.99</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>#003</td>
+            <td>Emma Brown</td>
+            <td>Pasta</td>
+            <td>In Progress</td>
+            <td>$10.50</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
